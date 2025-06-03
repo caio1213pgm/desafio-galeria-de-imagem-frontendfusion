@@ -9,6 +9,7 @@ function ListPictures(props) {
           key={picture.id}
           image={picture.download_url}
           autor={picture.author}
+          id={picture.id}
         />
       ))}
     </div>

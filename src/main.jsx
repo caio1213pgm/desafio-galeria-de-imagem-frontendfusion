@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Home from './home.jsx'
-import './index.css'
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import MainRoutes from "./routes/Routes.jsx";
+import FavoriteProvider from "./context/FavoriteContext.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <FavoriteProvider>
+    <MainRoutes />
+  </FavoriteProvider>
+);
