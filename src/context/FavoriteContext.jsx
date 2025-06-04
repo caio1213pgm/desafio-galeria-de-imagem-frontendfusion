@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const FavoriteContext = createContext({
   favoriteList: [],
@@ -10,6 +10,18 @@ const FavoriteContext = createContext({
 export default function FavoriteProvider(props) {
   const [favoriteList, setFavoriteListe] = useState([]);
 
+  useEffect(() => {
+    try {
+      const listStorage = localStorage.getItem("favorites");
+      if (listStorage) {
+        const listParsed = JSON.parse(listStorage);
+        setFavoriteListe(listParsed);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   function addToFavorite(favoriteT) {
     const favorite = {
       author: favoriteT.author,
@@ -17,6 +29,7 @@ export default function FavoriteProvider(props) {
       id: favoriteT.id,
     };
     setFavoriteListe([...favoriteList, favorite]);
+    localStorage.setItem("favorites", JSON.stringify([...favoriteList, favorite]));
   }
 
   function removeToFavorite(id) {
@@ -24,10 +37,13 @@ export default function FavoriteProvider(props) {
     const newList = [...favoriteList];
     newList.splice(index, 1);
     setFavoriteListe(newList);
+    localStorage.setItem("favorites", JSON.stringify(newList));
   }
 
   return (
-    <FavoriteContext.Provider value={{ favoriteList, addToFavorite, removeToFavorite }}>
+    <FavoriteContext.Provider
+      value={{ favoriteList, addToFavorite, removeToFavorite }}
+    >
       {props.children}
     </FavoriteContext.Provider>
   );
