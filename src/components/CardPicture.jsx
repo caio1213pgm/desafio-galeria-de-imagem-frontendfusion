@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import { FaRegStar } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 import { useFavoriteContext } from "../context/FavoriteContext";
+import { useNavigate } from "react-router";
 
 function CardPicture(props) {
-  const [favorite, setFavorite] = useState(true);
   const { addToFavorite, removeToFavorite, favoriteList } =
     useFavoriteContext();
   const favoriteT = {
@@ -15,6 +14,13 @@ function CardPicture(props) {
   };
 
   const isFavorite = favoriteList.some((fav) => fav.id === props.id);
+  const navigate = useNavigate()
+
+  function getDetails(){
+    const query = new URLSearchParams()
+    query.set('id', props.id)
+    navigate(`/picture/${props.id}`)
+  }
 
   function setPictureFavorite(id) {
     if (!isFavorite) {
@@ -24,11 +30,10 @@ function CardPicture(props) {
     }
   }
   return (
-    <div className="bg-amberPrimary p-3 my-2 rounded hover:scale-105 transition-all duration-300">
-      <img src={props.image} alt="" className="rounded" />
+    <div className="bg-amberPrimary p-3 my-2 rounded hover:scale-105 transition-all duration-300" >
+      <img src={props.image} alt="" className="rounded cursor-pointer" onClick={() => getDetails()}/>
       <div className="flex items-center justify-between mt-2">
         <h1 className="text-white text-2xl">{props.autor}</h1>
-
         <div onClick={() => setPictureFavorite(props.id)}>
           {isFavorite ? (
             <IoIosStar className="size-6" />
