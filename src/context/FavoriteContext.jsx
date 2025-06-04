@@ -16,14 +16,11 @@ export default function FavoriteProvider(props) {
       download_url: favoriteT.download_url,
       id: favoriteT.id,
     };
-    console.log(favorite.id);
-    console.log(favoriteList);
     setFavoriteListe([...favoriteList, favorite]);
   }
 
   function removeToFavorite(id) {
     const index = favoriteList.findIndex((fav) => fav.id === id);
-    console.log(index)
     const newList = [...favoriteList];
     newList.splice(index, 1);
     setFavoriteListe(newList);
