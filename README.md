@@ -72,7 +72,7 @@ Os critérios de avaliação incluirão:
 
 ## Exemplo de E-mail:
 
-**Assunto:** Entrega + Desafios[02] + João Silva
+**Assunto:** Entrega + Desafios[02] + Caio Fabio
 
 ---
 
@@ -80,19 +80,19 @@ Olá,
 
 Segue abaixo a entrega do Desafio 02 para o processo seletivo do Frontend Fusion.
 
-**Nome:** João Silva  
-**Link do GitHub:** [https://github.com/joaosilva](https://github.com/joaosilva)  
-**Link do LinkedIn:** [https://linkedin.com/in/joaosilva](https://linkedin.com/in/joaosilva)  
-**Data de Início:** 01/09/2024  
-**Data de Entrega:** 20/09/2024  
-**Link do GitHub com o Código:** [https://github.com/joaosilva/desafio02](https://github.com/joaosilva/desafio02)  
-**Link do Deploy:** [https://joaosilva.netlify.app](https://joaosilva.netlify.app)  
-**Link da Postagem no LinkedIn:** [https://linkedin.com/posts/joaosilva/desafio-02](https://linkedin.com/posts/joaosilva/desafio-02)
+**Nome:** Caio Fabio  
+**Link do GitHub:** [https://github.com/caio1213pgm](https://github.com/caio1213pgm)  
+**Link do LinkedIn:** [https://linkedin.com/in/caiofcfx00](https://linkedin.com/in/caiofcfx00)  
+**Data de Início:** 30/05/2025  
+**Data de Entrega:** 05/06/2025  
+**Link do GitHub com o Código:** [https://github.com/caio1213pgm/desafio-galeria-de-imagem-frontendfusion](https://github.com/caio1213pgm/desafio-galeria-de-imagem-frontendfusion)  
+**Link do Deploy:** [https://galeryimage.vercel.app/](https://galeryimage.vercel.app/)  
+**Link da Postagem no LinkedIn:** [https://www.linkedin.com/feed/update/urn:li:activity:7336456301410942976/](https://www.linkedin.com/feed/update/urn:li:activity:7336456301410942976/)
 
 Agradeço a oportunidade e estou à disposição para qualquer dúvida.
 
 Atenciosamente,  
-João Silva
+Caio Fabio
 
 ---
 
